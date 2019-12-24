@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>로그인</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  #Login-window {
+    display:table;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  #Login-window_edge {
+    display:table;
+    vertical-align:middle;
+    justify-content: center;
+    width: 300px;
+    height: 370px;
+    border-radius: 5px;
+    border: solid 0.5px #707070;
+  }
+  .Login-Contents {
+    vertical-align:middle;
+    align-items: center;
+    margin: 30px;
+  }
+  .Login-Contents > h4 {
+    color: #707070;
+  }
+  .Login-Contents > div > ul {
+    color: #707070;
+  }
+  .Login-Contents > input {
+    width: 240px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 0.5px #707070;
+    text-align:center;
+    outline: none;
+  }
+  .Login-Contents > a{
+    color: #707070;
+    text-decoration: none;
+  }
+  .Login-Contents > button {
+    font-size: 15px;
+    border-radius: 5px;
+    width: 240px;
+    height: 50px;
+    color: white;
+    background-color: #4a7bf8;
+    outline: none;
+  }
+  #No-Account {
+    margin-top: 20px;
+  }
+  #No-Account > a {
+    color: #4a7bf8;
+    text-decoration: none;
+  }
+  #sub {
+      background-color: #4a7bf8;
+      font-size: 15px;
+  }
+    </style>
+</head>
+<body>
+        <div id="Login-window">
+            <h1>로그인</h1>
+        <div id="Login-window_edge">
+            <form method="POST" action="/login">
+            <div class="Login-Contents">
+                <h4>아이디</h4>
+                <input type="text" name="id">
+            </div>
+            <div class="Login-Contents">
+                <h4>비밀번호</h4>
+                <input type="password" name="pass">
+            </div>
+            <div class="Login-Contents">
+                <div>
+                <ul><input type="checkbox" name="Remember login information">&emsp;로그인 정보 기억하기</ul>  
+                </div> 
+            </div>
+            <div class="Login-Contents">
+                <input id="sub" type="submit" value="로그인">
+            </div>
+            <div class="Login-Contents">
+                <a href="">비밀번호 찾기</a>
+            </div>
+        </div>
+        <div id="No-Account"><a href="/signup">계정이 없으신가요?</a></div>
+    </div></form>
+</body>
+</html>
